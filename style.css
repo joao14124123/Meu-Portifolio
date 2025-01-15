@@ -1,0 +1,323 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+        color: white;
+        line-height: 1.6;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, black 0%, #121212 50%, #f5f5f5 100%);
+  }
+  
+  /* Seção inicial */
+  #inicio {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; /* Alinha todo o conteúdo à esquerda */
+      padding-left: 30px; /* Adiciona um pequeno padding à esquerda para dar espaço */
+      margin-left: 300px;
+    }
+    
+    #inicio h2 {
+      margin-top: 5vh; /* Diminui o espaço superior */
+      font-size: 1.2rem;
+      color: #aaa;
+      font-weight: normal;
+      margin-bottom: 0.5rem; /* Menor espaço entre h2 e h1 */
+      text-align: left;
+    }
+    
+    #inicio h1 {
+      font-size: 3rem; /* Ajusta o tamanho para que o texto fique mais compacto */
+      font-weight: bold;
+      color: white;
+      margin-top: -15px; /* Remove o espaçamento superior para aproximar mais os títulos */
+      text-align: left; /* Alinha o título à esquerda */
+    }
+    
+    #inicio .hl {
+      font-size: 6rem; /* Tamanho de fonte ajustado para ser proporcional ao resto */
+      color: white;
+      margin-top: -35px; /* Ajusta a posição para ficar mais perto do título acima */
+      text-align: left; /* Alinha à esquerda */
+    }
+    
+    #inicio .highlight {
+        display: flex;
+        align-items: center; /* Alinha verticalmente os ícones com o texto */
+        gap: 0.8rem; /* Espaço entre o texto e os ícones */
+        font-size: 3rem; /* Ajuste o tamanho conforme necessário */
+        color: white;
+        margin-top: -10px; /* Ajuste do espaçamento superior */
+    }
+    
+    #inicio .social-icons {
+        display: flex;
+        gap: 15px; /* Espaço entre os ícones */
+    }
+    
+    #inicio .social-icons img {
+        width: 30px;
+        height: 30px; /* Tamanho uniforme dos ícones */
+        transition: transform 0.3s ease;
+    }
+    
+    #inicio .social-icons img:hover {
+        transform: scale(1.2);
+    }
+    
+    
+
+
+    /* Seção Sobre Mim */
+#sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Espaço entre o texto e o avatar */
+    margin: 2rem 0; /* Espaço vertical entre as seções */
+    animation: fadeIn 1.5s ease; /* Animação para a entrada da seção */
+}
+
+.sobre-mim-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.texto-sobre p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #aaa;
+    max-width: 500px;
+    text-align: left;
+    animation: slideInLeft 1s ease; /* Animação do texto */
+}
+
+.avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Avatar circular */
+    border: 2px solid white;
+    animation: slideInRight 1s ease; /* Animação do avatar */
+}
+
+/* Seção Sobre Mim */
+#sobre-mim {
+    display: flex;
+    justify-content: flex-start; /* Move o bloco para a esquerda */
+    align-items: center;
+    gap: 2rem; /* Espaço entre o texto e o avatar */
+    margin: 4rem 0; /* Aumenta o espaçamento vertical entre as seções */
+    padding-left: 50px; /* Move o conteúdo levemente para dentro */
+    animation: fadeIn 2s ease-out; /* Animação mais suave */
+}
+
+.sobre-mim-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.texto-sobre p {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
+    color: #aaa;
+    max-width: 500px;
+    text-align: left;
+    animation: slideInLeft 1.5s ease-out; /* Animação mais lenta e suave */
+}
+
+.avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Avatar circular */
+    border: 2px solid white;
+    animation: slideInRight 1.5s ease-out; /* Animação mais lenta e suave */
+}
+
+
+
+    /*projetos */
+  
+  #projetos-competencias {
+    height: 200vh; 
+    text-align: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #projetos-competencias h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os projetos no topo */
+    gap: 2rem; /* Espaço entre os projetos */
+    flex-wrap: wrap; /* Permite múltiplas linhas para os projetos */
+    padding: 1rem 0; /* Espaço vertical entre projetos e outras seções */
+}
+
+.project {
+    text-align: center;
+    width: 300px; /* Largura fixa das imagens */
+    transition: opacity 1.8s ease-out, transform 1.5s ease-out; /* Animação mais suave */
+    opacity: 0; /* Inicialmente invisível para animação de entrada */
+    transform: translateY(50px);
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project img {
+    width: 100%; /* Imagem ocupa a largura total do bloco */
+    border-radius: 10px; /* Cantos levemente arredondados */
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05); /* Aumenta levemente no hover */
+}
+
+.project .language {
+    font-weight: bold;
+    color: #080808; /* Azul destacado */
+    margin: 0.5rem 0;
+}
+
+.project .description {
+    color: #000000; /* Texto mais discreto */
+    margin-bottom: 0.5rem;
+}
+
+
+/* Container das linguagens usadas no projeto */
+.languages-used {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre as imagens */
+    margin-top: 0.5rem; /* Espaço acima do botão */
+}
+
+/* Imagem das linguagens */
+.languages-used img {
+    width: 50px; /* Tamanho padrão das imagens */
+    height: 30px; /* Mantém a proporção */
+    object-fit: contain; /* Ajusta a imagem ao espaço sem cortar */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+.languages-used img:hover {
+    transform: scale(1.2); /* Ampliação ao passar o mouse */
+}
+
+
+
+
+  
+  /* Competências */
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .skill {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .skill img {
+    width: 50px;
+    max-width: 70px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+
+
+  .skill:hover {
+    transform: scale(1.1);
+}
+
+
+  .skill p {
+    font-size: 1rem;
+    color: black;
+    margin: 0;
+  }
+
+
+  
+
+/* Animações ajustadas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-80%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(90%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
